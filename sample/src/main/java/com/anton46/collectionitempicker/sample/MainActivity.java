@@ -5,7 +5,7 @@ import com.anton46.collectionitempicker.Item;
 import com.anton46.collectionitempicker.OnItemClickListener;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by anton on 2/16/15.
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     CollectionPicker mPicker;
     TextView mTextView;
@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mPicker = (CollectionPicker) findViewById(R.id.collection_item_picker);
+        mPicker = findViewById(R.id.collection_item_picker);
         mPicker.setItems(generateItems());
         mPicker.setOnItemClickListener(new OnItemClickListener() {
             @Override
